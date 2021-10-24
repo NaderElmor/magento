@@ -55,14 +55,8 @@
         <filters name="listing_filters"/>
         <paging name="listing_paging"/>
 
-<!--        massaction select-->
+
         <massaction name="listing_massaction">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="selectProvider" xsi:type="string">page_member_listing.page_member_listing.page_member_columns.actions</item>
-                    <item name="indexField" xsi:type="string">entity_id</item>
-                </item>
-            </argument>
             <action name="delete">
                 <settings>
                     <confirm>
@@ -99,6 +93,63 @@
                 </settings>
             </action>
         </massaction>
+
+
+        <!--&lt;!&ndash;        massaction select&ndash;&gt;-->
+<!--        <massaction name="listing_massaction">-->
+<!--            <argument name="data" xsi:type="array">-->
+<!--                <item name="config" xsi:type="array">-->
+<!--                    <item name="selectProvider" xsi:type="string">page_member_listing.page_member_listing.page_member_columns.actions</item>-->
+<!--                    <item name="indexField" xsi:type="string">entity_id</item>-->
+<!--                </item>-->
+<!--            </argument>-->
+<!--            <action name="delete">-->
+<!--                <argument name="data" xsi:type="array">-->
+<!--                    <item name="config" xsi:type="array">-->
+<!--                        <item name="type" xsi:type="string">delete</item>-->
+<!--                        <item name="label" xsi:type="string">Delete</item>-->
+<!--                        <item name="url" xsi:type="url" path="page/member/massDelete"/>-->
+<!--                        <item name="confirm" xsi:type="array">-->
+<!--                            <item name="title" xsi:type="string">Delete Members</item>-->
+<!--                            <item name="message" xsi:type="string">Are you sure you want to delete selected members?</item>-->
+<!--                        </item>-->
+<!--                    </item>-->
+<!--                </argument>-->
+<!--&lt;!&ndash;                <settings>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <confirm>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <message translate="true">Are you sure you want to delete selected members?</message>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <title translate="true">Delete members</title>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </confirm>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <url path="page/member/massDelete"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <type>delete</type>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <label translate="true">Delete</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                </settings>&ndash;&gt;-->
+<!--            </action>-->
+<!--&lt;!&ndash;            <action name="disable">&ndash;&gt;-->
+<!--&lt;!&ndash;                <settings>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <url path="page/member/massDisable"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <type>disable</type>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <label translate="true">Disable</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                </settings>&ndash;&gt;-->
+<!--&lt;!&ndash;            </action>&ndash;&gt;-->
+<!--&lt;!&ndash;            <action name="enable">&ndash;&gt;-->
+<!--&lt;!&ndash;                <settings>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <url path="page/member/massEnable"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <type>enable</type>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <label translate="true">Enable</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                </settings>&ndash;&gt;-->
+<!--&lt;!&ndash;            </action>&ndash;&gt;-->
+<!--&lt;!&ndash;            <action name="edit">&ndash;&gt;-->
+<!--&lt;!&ndash;                <settings>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <callback>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <target>editSelected</target>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <provider>page_member_listing.page_member_listing.page_member_columns_editor</provider>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </callback>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <type>edit</type>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <label translate="true">Edit</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                </settings>&ndash;&gt;-->
+<!--&lt;!&ndash;            </action>&ndash;&gt;-->
+<!--        </massaction>-->
 
     </listingToolbar>
 
